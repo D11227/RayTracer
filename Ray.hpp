@@ -15,7 +15,5 @@ class Ray {
 		
 		// Ray is a linear line
 		// y = ax + b
-		inline Vector point_at_parameter(const float& t) const {
-			return origin + direction*t;
-		}
+		inline Vector point_at_parameter(const float& t) const { return origin + direction*t; }
 };
