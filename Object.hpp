@@ -1,7 +1,5 @@
 #pragma once
 
-#include <tuple>
-
 #include "Vector.hpp"
 #include "Ray.hpp"
 

@@ -25,7 +25,8 @@ Vector random_vector(const int& min, const int& max) {
 	}
 }
 
-Color trace(const std::array<Sphere, 2>& world, const Ray& r, int ray_limit) {
+template<std::size_t SIZE>
+Color trace(const std::array<Sphere, SIZE>& world, const Ray& r, int ray_limit) {
 	if (ray_limit <= 0) return Color(0, 0, 0);
 	
 	float closest_object = infinity;
@@ -53,8 +54,9 @@ int32_t main() {
 	const int samples_per_pixel = 100;
 	const int ray_limit = 50;
 
-	const std::array<Sphere, 2> world = {
+	const std::array<Sphere, 3> world = {
 		Sphere(Vector(0, 0, -1), 0.5, Color(0.3, 1., 0.5)),
+		Sphere(Vector(1, -0.2, -1.2), 0.3, Color(0.6, 0.1, 0.2)),
 		Sphere(Vector(0, -100.5, -1), 100, Color(0.3, 0.5, 1.))
 	};
 

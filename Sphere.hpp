@@ -1,8 +1,6 @@
 #pragma once
 
-#include <tuple>
 #include <math.h>
-#include <limits>
 
 #include "Object.hpp"
 #include "Vector.hpp"
